@@ -47,9 +47,10 @@
 
   /* HERO */
   .hero {
-    min-height: 100vh; display: flex; align-items: center;
-    padding: 8rem 5vw 5rem; position: relative; overflow: hidden;
+    min-height: 100vh; display: flex; flex-direction: column; align-items: stretch; justify-content: center;
+    padding: 7rem 0 5rem; position: relative; overflow: hidden;
   }
+  .hero-inner { display: flex; align-items: center; padding: 0 5vw; position: relative; z-index: 1; }
   .hero::before {
     content: ''; position: absolute; inset: 0;
     background:
@@ -202,9 +203,63 @@
     .process-steps { grid-template-columns: 1fr; }
     .hero { padding-top: 6rem; }
   }
+
+
+  /* FIRM NAME HERO HEADING */
+  .firm-heading-block {
+    text-align: center;
+    padding: 3rem 5vw 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .firm-heading-block .firm-name {
+    font-family: var(--serif);
+    font-size: clamp(2.8rem, 8vw, 7rem);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    line-height: 1;
+    color: var(--white);
+    text-transform: uppercase;
+  }
+  .firm-heading-block .firm-name span {
+    color: var(--gold);
+  }
+  .firm-heading-block .firm-sub {
+    margin-top: 0.9rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(184,149,42,0.75);
+    font-family: var(--sans);
+    font-weight: 400;
+  }
+  .firm-heading-block .firm-rule {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  .firm-heading-block .firm-rule-line {
+    flex: 1;
+    max-width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+  .firm-heading-block .firm-rule-line.right {
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+  .firm-heading-block .firm-rule-diamond {
+    width: 6px; height: 6px;
+    background: var(--gold);
+    transform: rotate(45deg);
+  }
+
 </style>
 </head>
 <body>
+</div>
+
 
 <!-- NAV -->
 <nav>
@@ -224,6 +279,16 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-grid-bg"></div>
+    <div class="firm-heading-block">
+      <div class="firm-name"><span>Simha</span> Law Associates</div>
+      <div class="firm-rule">
+        <div class="firm-rule-line"></div>
+        <div class="firm-rule-diamond"></div>
+        <div class="firm-rule-line right"></div>
+      </div>
+      <div class="firm-sub">Advocates &nbsp;·&nbsp; Counselors &nbsp;·&nbsp; Strategic Solutions</div>
+    </div>
+  <div class="hero-inner">
   <div class="hero-content">
     <div class="hero-eyebrow">
       <div class="hero-eyebrow-line"></div>
@@ -247,6 +312,7 @@
     <div><span class="hero-stat-num">15+</span><span class="hero-stat-label">Years of Practice</span></div>
     <div><span class="hero-stat-num">800+</span><span class="hero-stat-label">Cases Resolved</span></div>
     <div><span class="hero-stat-num">98%</span><span class="hero-stat-label">Client Satisfaction</span></div>
+  </div>
   </div>
 </section>
 
@@ -275,6 +341,7 @@
       </div>
     </div>
   </div>
+  </div>
 </section>
 
 <div class="gold-divider"></div>
@@ -291,6 +358,7 @@
     <div class="practice-card"><div class="practice-num">04</div><span class="practice-icon">🔒</span><div class="practice-title">Criminal Law</div><p class="practice-desc">Bail applications, anticipatory bail, FIR quashing, trial defence, white-collar crime, and appeals across Sessions Courts and the High Court.</p></div>
     <div class="practice-card"><div class="practice-num">05</div><span class="practice-icon">👨‍👩‍👧</span><div class="practice-title">Family &amp; Succession</div><p class="practice-desc">Matrimonial disputes, divorce, maintenance, child custody, will drafting, probate, and succession planning for individuals and NRI families.</p></div>
     <div class="practice-card"><div class="practice-num">06</div><span class="practice-icon">🌐</span><div class="practice-title">NRI Legal Services</div><p class="practice-desc">Power of Attorney drafting, property management, court representation, and end-to-end legal assistance for non-resident Indians with matters in Bangalore.</p></div>
+  </div>
   </div>
 </section>
 
@@ -315,6 +383,7 @@
       <p class="team-bio">Specialises in real estate, family law, and civil matters. Known for meticulous drafting and strategic counsel, particularly in property disputes and succession planning across Karnataka.</p>
     </div>
   </div>
+  </div>
 </section>
 
 <div class="gold-divider"></div>
@@ -330,6 +399,7 @@
     <div class="process-step"><div class="process-dot">03</div><div class="process-step-title">Strategy &amp; Engagement</div><p class="process-step-desc">A written engagement letter outlines scope, fees, timelines, and approach — no surprises. You stay informed at every milestone.</p></div>
     <div class="process-step"><div class="process-dot">04</div><div class="process-step-title">Resolution</div><p class="process-step-desc">Whether through negotiation, arbitration, or full-scale litigation, we pursue resolution with dedication until your matter is closed.</p></div>
   </div>
+  </div>
 </section>
 
 <div class="gold-divider"></div>
@@ -343,6 +413,7 @@
     <div class="testimonial-card"><div class="testimonial-quote">"</div><p class="testimonial-text">Simha Law handled our company's acquisition with exceptional thoroughness. Every clause, every risk — they found it before it became a problem.</p><div class="testimonial-author">Suresh Menon</div><div class="testimonial-meta">Director, Menon Technologies Pvt. Ltd. · Bangalore</div></div>
     <div class="testimonial-card"><div class="testimonial-quote">"</div><p class="testimonial-text">As an NRI managing a property dispute from abroad, I was anxious. The team at Simha Law was responsive, clear, and won us a favourable decree.</p><div class="testimonial-author">Priya Chandrasekaran</div><div class="testimonial-meta">NRI Client · Singapore</div></div>
     <div class="testimonial-card"><div class="testimonial-quote">"</div><p class="testimonial-text">They secured anticipatory bail within 48 hours of briefing. Their knowledge of the High Court and quick mobilisation saved us from a very difficult situation.</p><div class="testimonial-author">Rajesh &amp; Kavitha A.</div><div class="testimonial-meta">Family Matter · Bangalore</div></div>
+  </div>
   </div>
 </section>
 
